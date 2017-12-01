@@ -52,7 +52,7 @@ describe('day 1', () => {
         });
         
         describe('What is the solution to your new captcha?', () => {
-            test('???', () => {
+            test('1220', () => {
                 const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
             
                 expect(part2(input)).toBe(1220);
