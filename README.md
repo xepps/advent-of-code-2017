@@ -5,10 +5,10 @@ Let's be honest. I might not do all of them.
 
 ## Results
 
-Total :star:: 2
+Total :star:: 4
 
 Day 1: :star::star:
-Day 2:
+Day 2: :star::star:
 Day 3:
 Day 4:
 Day 5:
