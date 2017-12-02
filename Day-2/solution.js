@@ -19,6 +19,6 @@ module.exports = {
     part2: (input) => determine(
         input, 
         (e, i, a) => a.filter(x => x % e === 0 || e % x === 0).length === 2, 
-        (acc, e) => acc/e
+        (acc, e) => acc / e
     )
 };
