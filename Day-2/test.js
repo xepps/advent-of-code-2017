@@ -13,10 +13,10 @@ describe.only('day 1', () => {
         });
        
         describe('What is the checksum for the input sheet?', () => {
-            test(9804, () => {
+            test(36766, () => {
                 const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
             
-                expect(part1(input)).toBe(9804);
+                expect(part1(input)).toBe(36766);
             });
         });
     });
