@@ -27,28 +27,28 @@ describe('day 1', () => {
 
     describe.only('part 2', () => {
         test('Square 1 starts with the value 1.', () => {
-            expect(part2((total, position) =>  position < 1)).toBe(1);
+            expect(part2((total, position) =>  position === 1)).toBe(1);
         });
 
         test('Square 2 has only one adjacent filled square (with value 1), so it also stores 1.', () => {
-            expect(part2((total, position) =>  position < 2)).toBe(1);
+            expect(part2((total, position) =>  position === 2)).toBe(1);
         });
 
         test('Square 3 has both of the above squares as neighbors and stores the sum of their values, 2.', () => {
-            expect(part2((total, position) =>  position < 3)).toBe(2);
+            expect(part2((total, position) =>  position === 3)).toBe(2);
         });
 
         test('Square 4 has all three of the aforementioned squares as neighbors and stores the sum of their values, 4.', () => {
-            expect(part2((total, position) =>  position < 4)).toBe(4);
+            expect(part2((total, position) =>  position === 4)).toBe(4);
         });
 
         test('Square 5 only has the first and fourth squares as neighbors, so it gets the value 5.', () => {
-            expect(part2((total, position) =>  position < 5)).toBe(5);
+            expect(part2((total, position) =>  position === 5)).toBe(5);
         });
        
         describe('What is the first value written that is larger than your puzzle input?', () => {
             test('349975', () => {
-                expect(part2((total) =>  total < 347991)).toBe(349975);
+                expect(part2((total) =>  total > 347991)).toBe(349975);
             });
         });
     });
