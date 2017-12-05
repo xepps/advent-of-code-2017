@@ -48,10 +48,10 @@ describe('day 1', () => {
         });
                
         describe('Under this new system policy, how many passphrases are valid?', () => {
-            test('???', () => {
+            test('251', () => {
                 const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
             
-                expect(part2(input)).toBe('???');
+                expect(part2(input)).toBe(251);
             });
         });
     });
