@@ -3,7 +3,7 @@ const join = require('path').join;
 
 const { part1, part2 } = require('./solution');
 
-describe('day 1', () => {
+describe('day 4', () => {
     describe('part 1', () => {
         test('aa bb cc dd ee is valid.', () => {
             expect(part1('aa bb cc dd ee')).toBe(1);

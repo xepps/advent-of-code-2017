@@ -1,6 +1,6 @@
 const { part1, part2 } = require('./solution');
 
-describe('day 1', () => {
+describe('day 3', () => {
     describe('part 1', () => {
         test('Data from square 1 is carried 0 steps, since it\'s at the access port.', () => {
             expect(part1(1)).toBe(0);

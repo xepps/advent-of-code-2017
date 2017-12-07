@@ -3,7 +3,7 @@ const join = require('path').join;
 
 const { part1, part2 } = require('./solution');
 
-describe('day 1', () => {
+describe('day 2', () => {
     describe('part 1', () => {
         test('Sample spreadsheet gives the checksum 18', () => {
             const input = `5   1   9   5

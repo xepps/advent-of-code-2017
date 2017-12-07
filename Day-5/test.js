@@ -3,7 +3,7 @@ const join = require('path').join;
 
 const { part1, part2 } = require('./solution');
 
-describe('day 1', () => {
+describe('day 5', () => {
     describe('part 1', () => {
         test('0 3 0 1 -3 should take 5 steps to get to the end', () => {
             expect(part1([0, 3, 0,  1,  -3])).toBe(5);
