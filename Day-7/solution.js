@@ -26,5 +26,5 @@ const buildTree = input => {
 
 module.exports = {
     part1: (input) => Object.keys(buildTree(input))[0],
-    part2: (input) => null
+    part2: (input) => buildTree(input)
 };
