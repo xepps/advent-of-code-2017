@@ -35,12 +35,22 @@ const getWeightOfBranches = (node) => {
     return node;
 }
 
+const getDifferentBranch = (node, other = 0) => {
+    const indexOfDifferent = node.branches.map(b => b.totalWeight)
+        .map((e, i, a) => a.filter(x => x===e).length)
+        .indexOf(1);
+
+    return indexOfDifferent > -1 
+        ? getDifferentBranch(node.branches[indexOfDifferent], node.branches[indexOfDifferent === 0 ? 1 : 0].totalWeight)
+        : other;
+}
+
 module.exports = {
     part1: (input) => buildTree(input).start,
     part2: (input) => {
         let tree = buildTree(input);
         getWeightOfBranches(tree[tree.start]);
-        const sizes = tree[tree.start].branches.map(branch => branch.totalWeight).sort((a, b) => a - b);
-        return sizes[sizes.length-1] - sizes[0];
+
+        return getDifferentBranch(tree[tree.start]);
     }
 };

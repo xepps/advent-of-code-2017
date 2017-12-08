@@ -24,14 +24,14 @@ describe.only('day 7', () => {
         test('As you can see, tknk\'s disc is unbalanced: ugml\'s stack is heavier than the other two.', () => {
             const input = readFile(join(__dirname, 'sample.txt'), 'utf-8');
 
-            expect(part2(input)).toBe(8);
+            expect(part2(input)).toBe(243);
         });
 
         describe('Given that exactly one program is the wrong weight, what would its weight need to be to balance the entire tower?', () => {
-            test('1458', () => {
+            test('1486', () => {
                 const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
 
-                expect(part2(input)).toBe(1458);
+                expect(part2(input)).toBe(1486);
             });
         });
     });
