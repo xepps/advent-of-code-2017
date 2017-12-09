@@ -2,18 +2,6 @@ const _ = require('lodash');
 
 const removeIgnores = (input) => input.replace(/!./g, '');
 
-const garbageToRemove = (input) => {
-    const regex = /<(.*?)>/g;
-    let matches = [];
-    let garbage = 0;
-
-    while ((matches = regex.exec(input)) !== null) {
-        garbage += matches[1].length;
-    }
-
-    return garbage;
-};
-
 const removeGarbage = (input) => {
     input.replace(/<.*?>/g, '')
 };
@@ -30,6 +18,18 @@ const countBraces = (input) => {
             return acc;
         }, 0);
 }
+
+const garbageToRemove = (input) => {
+    const regex = /<(.*?)>/g;
+    let matches = [];
+    let garbage = 0;
+
+    while ((matches = regex.exec(input)) !== null) {
+        garbage += matches[1].length;
+    }
+
+    return garbage;
+};
 
 module.exports = {
     removeAllGarbage: _.flow(removeIgnores, removeGarbage),
