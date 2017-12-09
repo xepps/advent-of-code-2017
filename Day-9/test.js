@@ -4,7 +4,7 @@ const join = require('path').join;
 const { removeAllGarbage, part1, part2 } = require('./solution');
 
 describe('day 9', () => {
-    describe.only('part 1', () => {
+    describe('part 1', () => {
         describe('Removing garbage', () => {
             [
                 '<>',
@@ -42,4 +42,25 @@ describe('day 9', () => {
             expect(part1(input)).toBe(13154);
         });
     });
+
+    describe.only('part 2', () => {
+        [
+            { garbage: '<>', score: 0},
+            { garbage: '<random characters>', score: 17},
+            { garbage: '<<<<>', score: 3},
+            { garbage: '<!!>', score: 0},
+            { garbage: '<!!!>>', score: 0},
+            { garbage: '<{o"i!a,<{i<a>', score: 10}
+        ].forEach(({garbage, score}) => {
+            it(`should remove ${score} characters in the garbage ${garbage}`, () => {
+                expect(part2(garbage)).toBe(score);
+            });
+        });
+
+        test('How many non-canceled characters are within the garbage in your puzzle input?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+
+            expect(part2(input)).toBe(6369);
+        });
+    })
 });
