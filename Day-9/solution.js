@@ -2,9 +2,7 @@ const _ = require('lodash');
 
 const removeIgnores = (input) => input.replace(/!./g, '');
 
-const removeGarbage = (input) => {
-    input.replace(/<.*?>/g, '')
-};
+const removeGarbage = (input) => input.replace(/<.*?>/g, '');
 
 const removeCommas = (input) => input.replace(/,/g, '');
 
