@@ -16,16 +16,6 @@ const move = (position, direction) => ({
     y: position.y + direction.y
 });
 
-const setObjective = (steps) => {
-    let position = { x: 0, y: 0 };
-    
-    steps.forEach(step => {
-        position = move(position, direction(position, step));
-    });
-
-    return position;
-}
-
 const directionToOrigin = (position) => {
     const origin = { x: 0, y: 0 };
 
@@ -42,10 +32,25 @@ const distanceToOrigin = (position, step = 0) => {
     return distanceToOrigin(move(position, direction(position, directionToOrigin(position))), step+1);
 }
 
+const setObjective = (steps) => {
+    let position = { x: 0, y: 0 };
+    let furthest = 0;
+    
+    steps.forEach(step => {
+        position = move(position, direction(position, step));
+        let distanceAway = distanceToOrigin(position);
+        furthest = furthest < distanceAway ? distanceAway : furthest;
+    });
+
+    return { objective: position, furthest};
+}
+
 module.exports = {
     part1: (input) => {
-        const objective = setObjective(input.split(','));
+        const objective = setObjective(input.split(',')).objective;
         return distanceToOrigin(objective);
     },
-    part2: (input) => null
+    part2: (input) => {
+        return setObjective(input.split(',')).furthest;
+    }
 };

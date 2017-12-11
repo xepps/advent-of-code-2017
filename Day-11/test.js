@@ -22,4 +22,12 @@ describe('day 11', () => {
             expect(part1(path)).toBe(685);
         });
     });
+
+    describe('part 2', () => {
+        test('What is the furthest ever travelled from the origin?', () => {
+            const path = readFile(join(__dirname, 'input.txt'), 'utf-8');
+            
+            expect(part2(path)).toBe(1457);
+        });
+    });
 });
