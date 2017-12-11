@@ -19,7 +19,7 @@ describe('day 11', () => {
         test('How many steps does it take to return from the input\'s path?', () => {
             const path = readFile(join(__dirname, 'input.txt'), 'utf-8');
             
-            expect(part1(path)).toBe('???');
+            expect(part1(path)).toBe(685);
         });
     });
 });
