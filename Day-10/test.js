@@ -23,7 +23,7 @@ describe('day 10', () => {
         });
     });
 
-    describe.only('part 2', () => {
+    describe('part 2', () => {
         [
             { input: '', output: 'a2582a3a0e66e6e86e3812dcb672a272' },
             { input: 'AoC 2017', output: '33efeb34ea91902bb2f59c9920caa6cd' },
@@ -38,7 +38,7 @@ describe('day 10', () => {
         test('Treating your puzzle input as a string of ASCII characters, what is the Knot Hash of your puzzle input?', () => {
             const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
 
-            expect(part2(input)).toBe('???');
+            expect(part2(input)).toBe('899124dac21012ebc32e2f4d11eaec55');
         });
     });
 });
