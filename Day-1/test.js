@@ -21,12 +21,10 @@ describe('day 1', () => {
             expect(part1('91212129')).toBe(9);
         });
         
-        describe('What is the solution to your captcha?', () => {
-            test('1029', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part1(input)).toBe(1029);
-            });
+        test('What is the solution to your captcha?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part1(input)).toBe(1029);
         });
     });
 
@@ -51,12 +49,10 @@ describe('day 1', () => {
             expect(part2('12131415')).toBe(4);
         });
         
-        describe('What is the solution to your new captcha?', () => {
-            test('1220', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part2(input)).toBe(1220);
-            });
+        test('What is the solution to your new captcha?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part2(input)).toBe(1220);
         });
     });
 });

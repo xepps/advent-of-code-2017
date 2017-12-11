@@ -18,10 +18,8 @@ describe('day 3', () => {
             expect(part1(1024)).toBe(31);
         });
        
-        describe('How many steps are required to carry the data from the square identified in your puzzle input all the way to the access port?', () => {
-            test('480', () => {
-                expect(part1(347991)).toBe(480);
-            });
+        test('How many steps are required to carry the data from the square identified in your puzzle input all the way to the access port?', () => {
+            expect(part1(347991)).toBe(480);
         });
     });
 
@@ -46,10 +44,8 @@ describe('day 3', () => {
             expect(part2((total, position) =>  position === 5)).toBe(5);
         });
        
-        describe('What is the first value written that is larger than your puzzle input?', () => {
-            test('349975', () => {
-                expect(part2((total) =>  total > 347991)).toBe(349975);
-            });
+        test('What is the first value written that is larger than your puzzle input?', () => {
+            expect(part2((total) =>  total > 347991)).toBe(349975);
         });
     });
 });

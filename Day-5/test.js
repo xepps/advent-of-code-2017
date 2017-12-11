@@ -9,14 +9,12 @@ describe('day 5', () => {
             expect(part1([0, 3, 0,  1,  -3])).toBe(5);
         });
 
-        describe('How many steps does it take to reach the exit?', () => {
-            test('354121', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8')
-                    .split('\n')
-                    .map(n => parseInt(n, 10));
+        test('How many steps does it take to reach the exit?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8')
+                .split('\n')
+                .map(n => parseInt(n, 10));
 
-                expect(part1(input)).toBe(354121);
-            });
+            expect(part1(input)).toBe(354121);
         });
     });
 
@@ -25,14 +23,12 @@ describe('day 5', () => {
             expect(part2([0, 3, 0,  1,  -3])).toBe(10);
         });
 
-        describe('How many steps does it take to reach the exit?', () => {
-            test('27283023', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8')
-                    .split('\n')
-                    .map(n => parseInt(n, 10));
+        test('How many steps does it take to reach the exit?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8')
+                .split('\n')
+                .map(n => parseInt(n, 10));
 
-                expect(part2(input)).toBe(27283023);
-            });
+            expect(part2(input)).toBe(27283023);
         });
     });
 });

@@ -9,12 +9,10 @@ describe('day 6', () => {
             expect(part1('0 2 7 0')).toBe(5);
         });
 
-        describe('how many redistribution cycles must be completed before a configuration is produced that has been seen before?', () => {
-            test(6681, () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        test('how many redistribution cycles must be completed before a configuration is produced that has been seen before?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
 
-                expect(part1(input)).toBe(6681);
-            });
+            expect(part1(input)).toBe(6681);
         });
     });
 
@@ -23,12 +21,10 @@ describe('day 6', () => {
             expect(part2('0 2 7 0')).toBe(4);
         });
 
-        describe('How many cycles are in the infinite loop that arises from the configuration in your puzzle input?', () => {
-            test(2392, () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        test('How many cycles are in the infinite loop that arises from the configuration in your puzzle input?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
 
-                expect(part2(input)).toBe(2392);
-            });
+            expect(part2(input)).toBe(2392);
         });
     });
 });

@@ -43,7 +43,7 @@ describe('day 9', () => {
         });
     });
 
-    describe.only('part 2', () => {
+    describe('part 2', () => {
         [
             { garbage: '<>', score: 0},
             { garbage: '<random characters>', score: 17},

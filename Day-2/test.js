@@ -12,12 +12,10 @@ describe('day 2', () => {
             expect(part1(input)).toBe(18);
         });
        
-        describe('What is the checksum for the input sheet?', () => {
-            test(36766, () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part1(input)).toBe(36766);
-            });
+        test('What is the checksum for the input sheet?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part1(input)).toBe(36766);
         });
     });
     
@@ -29,12 +27,10 @@ describe('day 2', () => {
             expect(part2(input)).toBe(9);
         });
        
-        describe('What is the checksum for the input sheet?', () => {
-            test(261, () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part2(input)).toBe(261);
-            });
+        test('What is the checksum for the input sheet?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part2(input)).toBe(261);
         });
     });
 });

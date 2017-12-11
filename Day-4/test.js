@@ -17,12 +17,10 @@ describe('day 4', () => {
             expect(part1('aa bb cc dd aaa')).toBe(1);
         });
        
-        describe('How many passphrases are valid?', () => {
-            test('466', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part1(input)).toBe(466);
-            });
+        test('How many passphrases are valid?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part1(input)).toBe(466);
         });
     });
     
@@ -47,12 +45,10 @@ describe('day 4', () => {
             expect(part2('oiii ioii iioi iiio')).toBe(0);
         });
                
-        describe('Under this new system policy, how many passphrases are valid?', () => {
-            test('251', () => {
-                const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
-            
-                expect(part2(input)).toBe(251);
-            });
+        test('Under this new system policy, how many passphrases are valid?', () => {
+            const input = readFile(join(__dirname, 'input.txt'), 'utf-8');
+        
+            expect(part2(input)).toBe(251);
         });
     });
 });
