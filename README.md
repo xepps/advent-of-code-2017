@@ -5,4 +5,4 @@ Let's be honest. I might not do all of them.
 
 ## Results
 
-Total :star:: 18
+Total :star:: 20
