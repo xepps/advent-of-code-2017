@@ -38,8 +38,7 @@ const setObjective = (steps) => {
     
     steps.forEach(step => {
         position = move(position, direction(position, step));
-        let distanceAway = distanceToOrigin(position);
-        furthest = furthest < distanceAway ? distanceAway : furthest;
+        furthest = Math.max(furthest, distanceToOrigin(position));
     });
 
     return { objective: position, furthest};
