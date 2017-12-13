@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://github.com/xepps/advent-of-code-2017",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "devDependencies": {
     "jest": "^21.2.1"

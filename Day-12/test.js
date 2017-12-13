@@ -3,7 +3,7 @@ const join = require('path').join;
 
 const { part1, part2 } = require('./solution');
 
-describe('day 11', () => {
+describe('day 12', () => {
     describe('part 1', () => {
         it('should have 6 paths to house 0', () => {
             const connections = readFile(join(__dirname, 'sample.txt'), 'utf-8');
